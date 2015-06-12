@@ -20,7 +20,7 @@ module Wice #:nodoc:
         :id                 => calendar_data.dom_id,
         'data-locale'       => I18n.locale,
         'data-date-format'  => Wice::ConfigurationProvider.value_for(:DATE_FORMAT_JQUERY),
-        'data-button-image' => Wice::ConfigurationProvider.value_for(:CALENDAR_ICON),
+        'data-button-image' => ActionController::Base.helpers.asset_path(Wice::ConfigurationProvider.value_for(:CALENDAR_ICON)),
         'data-button-text'  => calendar_data.title
       }
 
